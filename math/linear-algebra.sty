@@ -1,0 +1,19 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{linear-algebra}[]
+
+\RequirePackage{amsmath}
+
+\makeatletter
+\def\Kern{\@ifnextchar\bgroup{\@KernP}{\@Kern}}
+  \def\@KernP#1{\text{kern}(#1)}
+  \def\@Kern{\text{kern}\,}
+\def\Image{\@ifnextchar\bgroup{\@ImageP}{\@Image}}
+  \def\@ImageP#1{\text{im}(#1)}
+  \def\@Image{\text{im}\,}
+\def\Span{\@ifnextchar\bgroup{\@SpanP}{\@Span}}
+  \def\@SpanP#1{\text{span}(#1)}
+  \def\@Span{\text{span}\,}
+\def\Dim{\@ifnextchar\bgroup{\@DimP}{\@Dim}}
+  \def\@DimP#1{\text{dim}(#1)}
+  \def\@Dim{\text{dim}\,}
+\makeatother

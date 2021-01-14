@@ -1,0 +1,31 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{titlepage-default}[]
+
+\newcommand{\titlepage}[3][]{
+  \begingroup
+    \thispagestyle{empty}
+    \begin{vplace}[0.7]
+      \centering
+
+      \vfill
+      \textbf{
+        \huge
+        #2
+      }\\[\baselineskip]
+      {
+        \huge
+        #1
+      }
+
+      \vspace{3cm}
+
+      {
+        #3
+      }
+      \vfill
+    \end{vplace}
+  \endgroup
+  \newpage
+  \clearpage
+  \setcounter{page}{1}
+}

@@ -1,0 +1,31 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{boxed-misc}[]
+
+\RequirePackage{amsthm}
+\RequirePackage[most]{tcolorbox}
+
+\newtcolorbox{BoxAnnotation}[1][]{
+  enhanced,
+  box align=top,
+  lowerbox=ignored,
+  colback=white,
+  frame hidden,
+  boxrule=2pt,
+  borderline={1pt}{0pt}{black!60,dotted},
+  sharp corners,
+  fontupper=\color{black!60},
+  #1
+}
+\newtcolorbox{TODO}[1][]{
+  enhanced,
+  box align=top,
+  lowerbox=ignored,
+  colback=white,
+  frame hidden,
+  boxrule=2pt,
+  borderline={1pt}{0pt}{black!20!orange,dashed},
+  sharp corners,
+  fontupper=\color{black!20!orange},
+  #1
+}
+

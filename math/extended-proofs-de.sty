@@ -1,0 +1,12 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{extended-proofs}[]
+
+\RequirePackage{amssymb}
+
+\newenvironment{kproof}{{\itshape Beweis durch Kontraposition.}}{\nolinebreak\hfill$\square$}
+\newenvironment{cproof}{{\itshape Beweis durch Widerspruch.}}{\nolinebreak\hfill$\square$}
+\newenvironment{proof*}{}{\nolinebreak\hfill$\square$}
+\newenvironment{induction}{{\itshape Beweis durch Induktion.}}{\nolinebreak\hfill$\square$}
+\newcommand{\IA}{{\itshape Induktionsanfang: }}
+\newcommand{\IV}{{\itshape Induktionsvoraussetzung: }}
+\newcommand{\IS}{{\itshape Induktionsschritt: }}

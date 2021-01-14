@@ -1,0 +1,28 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{boxed-assignments-de}[]
+
+\RequirePackage[most]{tcolorbox}
+
+\newtcolorbox{BoxAufgabe}[1][]{
+  enhanced,
+  box align=top,
+  lowerbox=ignored,
+  colback=gray!20,
+  frame hidden,
+  boxrule=0pt,
+  % borderline west={4pt}{0pt}{gray!60},
+  sharp corners,
+  #1
+}
+\newtcolorbox{BoxAssertion}[1][]{
+  enhanced,
+  box align=top,
+  lowerbox=ignored,
+  colback=gray!10,
+  frame hidden,
+  boxrule=0pt,
+  borderline west={4pt}{0pt}{gray!20},
+  sharp corners,
+  #1
+}
+\newenvironment{bassertion}{\begin{BoxAssertion}\textit{Zu zeigen:} \normalfont}{\end{BoxAssertion}}

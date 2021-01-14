@@ -1,0 +1,48 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{boxed-theorems}[]
+
+\RequirePackage{amsthm}
+\RequirePackage[most]{tcolorbox}
+
+\newtheorem{theorem}{Satz}[chapter]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{corollary}{Korollar}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\newtcolorbox{BoxTheorem}[1][]{
+  enhanced,
+  box align=top,
+  lowerbox=ignored,
+  colback=blue!20,
+  frame hidden,
+  boxrule=0pt,
+  borderline west={4pt}{0pt}{blue!40},
+  sharp corners,
+  #1
+}
+\newenvironment{btheorem}[1][]{\begin{BoxTheorem}\begin{theorem}[#1]\normalfont}{\end{theorem}\end{BoxTheorem}}
+\newtcolorbox{BoxProposition}[1][]{
+  enhanced,
+  box align=top,
+  lowerbox=ignored,
+  colback=purple!40!gray!20,
+  frame hidden,
+  boxrule=0pt,
+  borderline west={4pt}{0pt}{purple!60!gray!60},
+  sharp corners,
+  #1
+}
+\newenvironment{bproposition}{\begin{BoxProposition}\begin{proposition}\normalfont}{\end{proposition}\end{BoxProposition}}
+\newtcolorbox{BoxDefinition}[1][]{
+  enhanced,
+  box align=top,
+  lowerbox=ignored,
+  colback=yellow!40!gray!20,
+  frame hidden,
+  boxrule=0pt,
+  borderline west={4pt}{0pt}{yellow!60!gray!60},
+  sharp corners,
+  #1
+}
+\newenvironment{bdefinition}{\begin{BoxDefinition}\begin{definition}\normalfont}{\end{definition}\end{BoxDefinition}}
